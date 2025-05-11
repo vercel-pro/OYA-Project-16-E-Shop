@@ -4,7 +4,7 @@ import React from 'react';
 const HomePage = () => {
     return (
         <>
-            <h1 className=''>Home page</h1>
+            <h1>Home Page</h1>
         </>
     );
 };

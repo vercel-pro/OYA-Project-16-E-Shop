@@ -1,12 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 const CommonLayout = () => {
     return (
         <>
-            <h1>head</h1>
+            <Header/>
             <Outlet/>
-            <h1>footer</h1>
+            <Footer/>
         </>
     );
 };
