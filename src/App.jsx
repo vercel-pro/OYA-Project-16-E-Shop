@@ -10,7 +10,7 @@ import MyAccountsPage from './pages/MyAccountsPage';
 import BlogsPage from './pages/BlogsPage';
 import BlogDetailsPage from './pages/BlogDetailsPage';
 import ContactPage from './pages/ContactPage';
-import CommonLayout from './components/common/CommonLayout';
+import CommonLayout from './components/commonLayouts/CommonLayout';
 
 function App() {
 
