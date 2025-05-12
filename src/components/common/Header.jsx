@@ -6,7 +6,7 @@ import { IoCartOutline } from "react-icons/io5";
 const Header = () => {
     return (
         <>
-            <div className="containerWidth flex justify-between items-center text-sm text-">
+            <div className="flex justify-between items-center text-sm text-">
                 <div className="flex justify-between items-center gap-x-5">
                     <div className="flex justify-start items-center gap-x-1 pr-4 border-e">
                         <IoLocationOutline/>
