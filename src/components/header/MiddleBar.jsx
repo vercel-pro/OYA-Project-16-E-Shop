@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../commonLayouts/Container';
 import { IoSearchSharp } from "react-icons/io5";
-// import cartIcon from './../../assets/icons/cartIcon';
+import CartIcon from '../../assets/icons/CartIcon';
 
 const MiddleBar = () => {
     return (
@@ -20,7 +20,7 @@ const MiddleBar = () => {
                             <IoSearchSharp className='w-4 text-3xl absolute top-1/2 right-6 -translate-y-1/2'/>
                         </div>
                         <div>
-                            <cartIcon/>
+                            <CartIcon/>
                         </div>
                         <div>accounts Section</div>
                     </div>
