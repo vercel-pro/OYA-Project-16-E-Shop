@@ -22,7 +22,7 @@ const MiddleBar = () => {
                         <div>
                             <cartIcon/>
                         </div>
-                        <div>accounts</div>
+                        <div>accounts Section</div>
                     </div>
                 </div>
             </Container>
