@@ -7,11 +7,9 @@ import Container from './Container';
 const CommonLayout = () => {
     return (
         <>
-            <Container>
-                <Header/>
-                <Outlet/>
-                <Footer/>
-            </Container>
+            <Header/>
+            <Outlet/>
+            <Footer/>
         </>
     );
 };

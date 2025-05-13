@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
+import { FaAngleDown } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+
 
 const TopRightBar = () => {
 
     const [selectedCountry, setSelectedCountry] = useState(null);
+    const [isOpen, setIsOpen] = useState(false);
 
     const countries = [
         { name: "United States", value: "US", flag: "https://flagcdn.com/16x12/us.png" },
@@ -27,35 +35,80 @@ const TopRightBar = () => {
         { name: "Argentina", value: "AR", flag: "https://flagcdn.com/16x12/ar.png" }
     ];
 
+    const handleSelect = (country)=>{
+        setSelectedCountry(country)
+        setIsOpen(false)
+    }
 
     return (
         <>
             <div className="flex justify-end items-center gap-x-[49px]">
-                <div>usd</div>
+                <div>
+                    <select name="" id="">
+                        <option value="USD">USD</option>
+                        <option value="BDT">BDT</option>
+                        <option value="Euro">Euro</option>
+                    </select>
+                </div>
                 <div className='relative before:content-[""] before:absolute before:w-[1px] before:h-8 before:bg-[#BFBFBF] before:-left-6 before:top-1/2 before:-translate-1/2 after:content-[""] after:absolute after:w-[1px] after:h-8 after:bg-[#BFBFBF] after:-right-6 after:top-1/2 after:-translate-1/2'>
                     <select 
-                    className='w-[112px] text-right hidden'
                     name="country"
+                    className='w-[170px] text-right hidden'
                     value={selectedCountry?.value || ''}
                     onChange={(e)=>{
                         const country = countries.find((c)=>c.value === e.target.value)
                     }}>
                         {
                             countries.map((country, index) => (
-                                <option value={country.value}><img src='https://flagcdn.com/256x192/ua.png'/> {country.name}</option>
-
+                                <option key={index} value={country.value}>{country.name}</option>
                             ))
                         }
-                        <option value={""}><img src='https://flagcdn.com/256x192/ua.png'/> English</option>
                     </select>
                     
                     {/* Custom Dropdown */}
-                    <div className="border border-red-500 p-2 bg-green-500 cursor-pointer flex items-center"></div>
+                    <div onClick={()=>setIsOpen(!isOpen)} className="w-[170px]  p-2 cursor-pointer flex items-center">
+                        {
+                            selectedCountry ? 
+                            <>
+                                <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2'/>
+                                <span className='mr-6'>{selectedCountry?.name}</span>
+                                <FaAngleDown />
+                            </> : 
+                            <span className='flex items-center gap-x-2'>Select a country <FaAngleDown /></span>
+                        }
+                    </div>
 
+                    {/* Option list */}
+                    {
+                        isOpen && (
+                            <ul className='absolute w-full border border-gray-300 bg-white shadow-lg z-10'>
+                                {
+                                    countries.map((country, index) => (
+                                        <li key={index} onClick={()=> handleSelect(country)} className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>
+                                            <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
+                                            {
+                                                 country.name
+                                            }
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        )
+                    }
 
 
                 </div>
-                <div>social meida</div>
+                <div className='flex justify-end items-center gap-x-3'>
+                    <Link to={"#"}>
+                        <FaFacebookF />
+                    </Link>
+                    <Link to={"#"}>
+                        <FaTwitter />
+                    </Link>
+                    <Link to={"#"}>
+                        <FaInstagram />
+                    </Link>
+                </div>
             </div>
         </>
     );
