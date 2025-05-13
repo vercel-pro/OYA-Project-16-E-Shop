@@ -1,9 +1,12 @@
 import React from 'react';
+import FooterTop from './FooterTop';
+import FooterBottom from './FooterBottom';
 
 const Footer = () => {
     return (
         <div>
-            footer
+            <FooterTop/>
+            <FooterBottom/>
         </div>
     );
 };
