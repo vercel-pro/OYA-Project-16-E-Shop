@@ -3,6 +3,7 @@ import Container from '../commonLayouts/Container';
 import { IoSearchSharp } from "react-icons/io5";
 import CartIcon from '../../assets/icons/CartIcon';
 import UserIcon from '../../assets/icons/UserIcon';
+import { Link } from 'react-router-dom';
 
 const MiddleBar = () => {
     return (
@@ -10,7 +11,9 @@ const MiddleBar = () => {
             <Container>
                 <div className="flex justify-between items-center py-8">
                     <div>
-                        <img src="images/logo.svg" alt="logo" />
+                        <Link to={"/"}>
+                            <img src="images/logo.svg" alt="logo" />
+                        </Link>
                     </div>
                     <div className='flex justify-end items-center'>
                         <div className='relative mr-2'>
