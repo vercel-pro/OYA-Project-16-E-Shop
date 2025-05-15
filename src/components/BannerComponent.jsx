@@ -8,7 +8,7 @@ const BannerComponent = () => {
             <div className="mt-8 mb-20">
                 <Container>
                     <Link to={"/"}>
-                        <img src={"../../public/images/bannerImage.svg"} alt="BannerImage" />
+                        <img src={"images/bannerImage.svg"} alt="BannerImage" />
                     </Link>
                 </Container>
             </div>
