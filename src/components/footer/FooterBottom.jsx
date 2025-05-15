@@ -14,7 +14,7 @@ const FooterBottom = () => {
         <>
             <div className="mt-[100px]">
                 <Container>
-                    <div className="flex justify-between border-b border-[#303030] pb-20">
+                    <div className="flex justify-between border-b border-[#30303040] pb-20">
                         <div className="">
                             <Link to={"/"}>
                                 <img src="images/logo.svg" alt="logo" />
@@ -95,7 +95,7 @@ const FooterBottom = () => {
                         <span>Copyright © 2023 E-Shop. All Rights Reserved. </span>
                         <div className="flex justify-end gap-x-6">
                             <Link to={"/"} >Privacy Policy</Link>
-                            <Link to={"/"}>Terms & Condition</Link>
+                            <Link to={"/"} className='relative before:content[""} before:w-[1px] before:h-[90%] before:bg-[#303030bf] before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 after:content[""} after:w-[1px] after:h-[90%] after:bg-[#303030bf] after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2'>Terms & Condition</Link>
                             <Link to={"/"}>Sitemap</Link>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ import { RiArrowDownSLine } from 'react-icons/ri';
 
 const NavBar = () => {
 
-    const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null)
 
     useEffect(()=>{

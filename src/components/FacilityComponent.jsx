@@ -23,7 +23,7 @@ const FacilityComponent = () => {
                             <p className='font-["Montserrat"] font-normal text-base'>Certified marketplace since 2017</p>
                         </div>
                     </div>
-                    <div className="flex gpx-x-6">
+                    <div className="flex gap-x-6">
                         <DeliveryIcon/>
                         <div>
                             <h6 className='font-["Montserrat"] font-bold text-base'>Shipping</h6>
