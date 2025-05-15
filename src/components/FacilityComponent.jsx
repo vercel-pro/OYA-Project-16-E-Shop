@@ -31,7 +31,7 @@ const FacilityComponent = () => {
                         </div>
                     </div>
                     <div className="flex gap-x-6">
-                        <img src="../../public/images/transIcon.svg" alt="" />
+                        <img src="images/transIcon.svg" alt="" />
                         <div>
                             <h6 className='font-["Montserrat"] font-bold text-base'>Transparent</h6>
                             <p className='font-["Montserrat"] font-normal text-base'>Hassle-free return policy</p>
