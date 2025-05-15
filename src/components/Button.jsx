@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Button = ({text, bg="#FF624C", fontName="Montserrat", fontWeight="bold", size="xl", color="white", paddingY="4", paddingX="10", radius="10"}) => {
-    return (
-        <>
-            <button className={`bg-[${bg}] font-[${fontName}] font-${fontWeight} text-${size} text-${color} py-${paddingY} px-${paddingX} rounded-[${radius}px]`}>{text}</button>
-        </>
-    );
-};
+const Button = ({text, bg = "bg-orange-500", font = "font-montserrat", fontWeight = "font-bold", size = "text-xl", textColor = "text-white", paddingY = "py-4", paddingX = "px-10", radius = "rounded-[10px]"}) => {
 
+    return (
+        <button className={`${bg} ${font} ${fontWeight} ${size} ${textColor} ${paddingY} ${paddingX} ${radius}`}>
+      {text}
+    </button>
+  );
+};
 export default Button;
