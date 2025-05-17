@@ -17,7 +17,10 @@ const NavBar = () => {
                 setIsDropdownOpen(false)
             }
         }
-        document.addEventListener('mousedown', handleClickOutSide)
+        document.addEventListener('click', handleClickOutSide)
+        return () =>{
+            document.removeEventListener('click', handleClickOutSide)
+        }
     },[])
 
     const handleProductDropdown = ()=>{
