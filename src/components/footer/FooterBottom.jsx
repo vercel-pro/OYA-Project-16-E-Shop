@@ -18,9 +18,10 @@ const FooterBottom = () => {
                         <div className="">
                             <Link to={"/"}>
                                 <img src="images/logo.svg" alt="logo" />
+                            </Link>
                                 <ul className='mt-[158px] flex flex-col gap-y-3'>
                                     <li>
-                                        <Link to="tel:+11234567" className='relative pl-4'>
+                                        <Link to="tel:11234567" className='relative pl-4'>
                                             <FiPhone className='absolute left-0 top-1/2 -translate-1/2'/>
                                             +15551234567
                                         </Link>
@@ -38,7 +39,7 @@ const FooterBottom = () => {
                                         </Link>
                                     </li>
                                 </ul>
-                            </Link>
+                            
                         </div>
                         <div className="w-[1000px] flex justify-between">
                             <div className="mr-[96px]">

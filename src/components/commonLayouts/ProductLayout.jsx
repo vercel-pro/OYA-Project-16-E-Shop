@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 const ProductLayout = ({ percentTag=false, categories,title,rating,totalRating,price,bg, border,stock,stockAmount }) => {
 
     let [ratingValue, setRatingValue] = useState(new Array(rating).fill(rating))
-    console.log(ratingValue)
-
     
     return (
         <div style={{background:bg}} className='w-[284px] border-2 border-transparent p-6 overflow-hidden rounded-lg transition-all duration-300 group hover:border-[#C3C3C3]'>
