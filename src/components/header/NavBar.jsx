@@ -12,14 +12,13 @@ const NavBar = () => {
 
     useEffect(()=>{
         const handleClickOutSide = (event)=>{
-            console.log(dropdownRef.current.contains(event.target),event.target)
             if( dropdownRef.current && !dropdownRef.current.contains(event.target)){
                 setIsDropdownOpen(false)
             }
         }
-        document.addEventListener('click', handleClickOutSide)
-        return () =>{
-            document.removeEventListener('click', handleClickOutSide)
+        document.addEventListener('mousedown', handleClickOutSide)
+        return()=>{
+            document.removeEventListener('mousedown', handleClickOutSide)
         }
     },[])
 
