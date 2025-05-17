@@ -1,6 +1,7 @@
 import React from 'react';
 import BannerComponent from '../components/BannerComponent';
 import FacilityComponent from '../components/FacilityComponent';
+import FeaturedProduct from '../components/FeaturedProduct';
 
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
         <>
             <BannerComponent/>
             <FacilityComponent/>
+            <FeaturedProduct/>
         </>
     );
 };

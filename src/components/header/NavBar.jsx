@@ -18,6 +18,9 @@ const NavBar = () => {
             }
         }
         document.addEventListener('mousedown', handleClickOutSide)
+        return()=>{
+            document.removeEventListener('mousedown', handleClickOutSide)
+        }
     },[])
 
     const handleProductDropdown = ()=>{
