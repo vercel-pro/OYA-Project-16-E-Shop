@@ -1,18 +1,58 @@
 import React from 'react';
 import ProductLayout from './commonLayouts/ProductLayout';
 import Container from './commonLayouts/Container';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+
+
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function CustomArrows() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
+}
 
 const FeaturedProduct = () => {
+
+    var settings = {
+    dots: true,
+    infinite: true,
+    speed: 50,
+    slidesToShow: 5,
+    slidesToScroll: 1
+    
+  };
+
     return (
         <>
             <Container>
-                <div className="flex gap-1 my-7">
+                {/* <div className="flex gap-1 my-7"> */}
+                <Slider {...settings} className='flex gap-1 my-7'>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={2} totalRating={200} price={900} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={5} totalRating={500} price={400} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={3} totalRating={300} price={562} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={4} totalRating={400} price={352} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={1} totalRating={100} price={32} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
-                </div>
+                    <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={1} totalRating={100} price={50} bg={"transparent"} border={true} stock={true} stockAmount={300}/>
+                    </Slider>
+                {/* </div> */}
             </Container>
         </>
     );
