@@ -12,7 +12,6 @@ const NavBar = () => {
 
     useEffect(()=>{
         const handleClickOutSide = (event)=>{
-            console.log(dropdownRef.current.contains(event.target),event.target)
             if( dropdownRef.current && !dropdownRef.current.contains(event.target)){
                 setIsDropdownOpen(false)
             }
