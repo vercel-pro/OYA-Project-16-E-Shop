@@ -47,12 +47,13 @@ const NavBar = () => {
                                         isCategoriesDropdownOpen && 
                                         <div className="w-48 bg-white absolute top-9 z-10 mt-2 rounded-md shadow-lg overflow-hidden">
                                                     <ul className='py-2 font-["Montserrat] font-normal text-base leading-6 text-[#303030]'>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-1</li>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-2</li>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-3</li>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-4</li>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-5</li>
-                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-6</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Computers & Tablets</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Mobile & Accessories</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>TV & Home Theater</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Audio & Headphones</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Cameras & Camcorders</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Gaming Equipment</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Home Appliances</li>
                                                     </ul>
                                                 </div>
                                     }
