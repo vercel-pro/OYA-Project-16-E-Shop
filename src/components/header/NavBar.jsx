@@ -8,6 +8,7 @@ import { RiArrowDownSLine } from 'react-icons/ri';
 const NavBar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false);
     const dropdownRef = useRef(null)
 
     useEffect(()=>{
@@ -26,6 +27,11 @@ const NavBar = () => {
         setIsDropdownOpen(!isDropdownOpen);
     }
 
+    // Categories DropdownOpen
+    const handleCategoriesDropdown = ()=>{
+        setIsCategoriesDropdownOpen(!isCategoriesDropdownOpen);
+    }
+
 
     return (
         <>
@@ -34,15 +40,28 @@ const NavBar = () => {
                     <div className="flex justify-between items-center font-['Montserrat'] font-bold text-sm">
                         <div>
                             <ul className='flex items-center gap-x-20'>
-                                <li className='flex items-center gap-x-4 cursor-pointer'>
+                                <li className='flex items-center gap-x-4 cursor-pointer relative'>
                                     <FaBars />
-                                    <Link to={"/product-list"}>All Categories</Link>
+                                    <button onClick={handleCategoriesDropdown}>All Categories</button>
+                                    {
+                                        isCategoriesDropdownOpen && 
+                                        <div className="w-48 bg-white absolute top-9 z-10 mt-2 rounded-md shadow-lg overflow-hidden">
+                                                    <ul className='py-2 font-["Montserrat] font-normal text-base leading-6 text-[#303030]'>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-1</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-2</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-3</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-4</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-5</li>
+                                                        <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-6</li>
+                                                    </ul>
+                                                </div>
+                                    }
                                 </li>
                                 <li ref={dropdownRef} className='relative'>
                                     <button onClick={handleProductDropdown} className='cursor-pointer flex items-center gap-x-1'>Products <RiArrowDownSLine className={`text-2xl ${isDropdownOpen && "rotate-180"}`}/></button>
                                     {
                                         isDropdownOpen && (
-                                            <div className="w-48 bg-white absolute z-10 mt-2 rounded-md shadow-lg overflow-hidden">
+                                            <div className="w-48 bg-white absolute top-9 z-10 mt-2 rounded-md shadow-lg overflow-hidden">
                                                 <ul className='py-2 font-["Montserrat] font-normal text-base leading-6 text-[#303030]'>
                                                     <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-1</li>
                                                     <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Product-2</li>
