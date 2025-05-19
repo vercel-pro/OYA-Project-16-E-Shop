@@ -10,7 +10,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      style={{ ...style, display: "block", background: "#30303040", color:"black", width: "40px", height:"40px", display: "flex", justifyContent:"center", alignItems:"center", borderRadius:"50%"}}
       onClick={onClick}
     />
   );
@@ -21,7 +21,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", background: "#30303040", color:"black", width: "40px", height:"40px", display: "flex", justifyContent:"center", alignItems:"center", borderRadius:"50%"}}
       onClick={onClick}
     />
   );
@@ -48,7 +48,7 @@ const FeaturedProduct = () => {
         <>
             <Container>
                 {/* <div className="flex gap-1 my-7"> */}
-                <Slider {...settings} className='flex gap-1 my-7'>
+                <Slider {...settings} className='flex justify-center gap-1 my-7'>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={2} totalRating={200} price={900} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={5} totalRating={500} price={400} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={3} totalRating={300} price={562} bg={"transparent"} border={true} stock={true} stockAmount={50}/>
