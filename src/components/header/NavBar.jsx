@@ -12,7 +12,7 @@ const NavBar = () => {
     const dropdownRef = useRef(null)
     const categoriesDropdownRef = useRef(null)
 
-    console.log(categoriesDropdownRef)
+    
 
     // Product Dropdown
     useEffect(()=>{
@@ -34,11 +34,14 @@ const NavBar = () => {
     // Categories DropdownOpen
     useEffect(()=>{
         const handleClickOutSideOfCat = (e)=>{
-            console.log(e);
-            
-            
+            if( categoriesDropdownRef.current && !categoriesDropdownRef.current.contains(e.target) ){
+                setIsCategoriesDropdownOpen(false)
+            }
         }
         document.addEventListener("mousedown", handleClickOutSideOfCat)
+        return()=>{
+            document.removeEventListener("mousedown", handleClickOutSideOfCat)
+        }
     },[])
 
     const handleCategoriesDropdown = ()=>{
@@ -53,7 +56,7 @@ const NavBar = () => {
                     <div className="flex justify-between items-center font-['Montserrat'] font-bold text-sm">
                         <div>
                             <ul className='flex items-center gap-x-20'>
-                                <li className='flex items-center gap-x-4 cursor-pointer relative'>
+                                <li ref={categoriesDropdownRef} className='flex items-center gap-x-4 cursor-pointer relative'>
                                     <FaBars />
                                     <button onClick={handleCategoriesDropdown} className='cursor-pointer flex items-center gap-x-1'>All Categories <RiArrowDownSLine className={`text-2xl ${isCategoriesDropdownOpen && "rotate-180"}`}/></button>
                                     {
