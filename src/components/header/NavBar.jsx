@@ -10,7 +10,11 @@ const NavBar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] = useState(false);
     const dropdownRef = useRef(null)
+    const categoriesDropdownRef = useRef(null)
 
+    console.log(categoriesDropdownRef)
+
+    // Product Dropdown
     useEffect(()=>{
         const handleClickOutSide = (event)=>{
             if( dropdownRef.current && !dropdownRef.current.contains(event.target)){
@@ -28,6 +32,15 @@ const NavBar = () => {
     }
 
     // Categories DropdownOpen
+    useEffect(()=>{
+        const handleClickOutSideOfCat = (e)=>{
+            console.log(e);
+            
+            
+        }
+        document.addEventListener("mousedown", handleClickOutSideOfCat)
+    },[])
+
     const handleCategoriesDropdown = ()=>{
         setIsCategoriesDropdownOpen(!isCategoriesDropdownOpen);
     }
@@ -42,10 +55,10 @@ const NavBar = () => {
                             <ul className='flex items-center gap-x-20'>
                                 <li className='flex items-center gap-x-4 cursor-pointer relative'>
                                     <FaBars />
-                                    <button onClick={handleCategoriesDropdown}>All Categories</button>
+                                    <button onClick={handleCategoriesDropdown} className='cursor-pointer flex items-center gap-x-1'>All Categories <RiArrowDownSLine className={`text-2xl ${isCategoriesDropdownOpen && "rotate-180"}`}/></button>
                                     {
                                         isCategoriesDropdownOpen && 
-                                        <div className="w-48 bg-white absolute top-9 z-10 mt-2 rounded-md shadow-lg overflow-hidden">
+                                        <div className="w-56 bg-white absolute top-9 z-10 mt-2 rounded-md shadow-lg overflow-hidden">
                                                     <ul className='py-2 font-["Montserrat] font-normal text-base leading-6 text-[#303030]'>
                                                         <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Computers & Tablets</li>
                                                         <li className='px-4 py-2 transition-all duration-200 hover:bg-gray-200 cursor-pointer'>Mobile & Accessories</li>
