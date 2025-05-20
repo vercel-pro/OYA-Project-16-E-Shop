@@ -131,7 +131,7 @@ const TopRightBar = () => {
                                 <span className='mr-6'>{selectedCountry?.name}</span>
                                 <FaAngleDown />
                             </> : 
-                            <span className='flex items-center gap-x-2'>Select a country <FaAngleDown /></span>
+                            <span className='flex items-center gap-x-2'>Select a country <FaAngleDown className={`${isOpen && "rotate-180"}`}/></span>
                         }
                     </div>
 
