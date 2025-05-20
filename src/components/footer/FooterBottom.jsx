@@ -45,49 +45,50 @@ const FooterBottom = () => {
                             <div className="mr-[96px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Links</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <li>Products List</li>
-                                    <li>Order Tracking</li>
-                                    <li>Products Guide</li>
-                                    <li>Shopping Cart</li>
-                                    <li>Tech Blog</li>
+                                    <Link to={"/"}></Link>
+                                    <Link to={"/"}>Products List</Link>
+                                    <Link to={"/"}>Order Tracking</Link>
+                                    <Link to={"/"}>Products Guide</Link>
+                                    <Link to={"/"}>Shopping Cart</Link>
+                                    <Link to={"/"}>Tech Blog</Link>
                                 </ul>
                             </div>
                             <div className="mr-[96px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Supports</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <li>About Us</li>
-                                    <li>Privacy Policy</li>
-                                    <li>Return Policy</li>
-                                    <li>Help Centre</li>
-                                    <li>Store Locations</li>
-                                    <li>Careers</li>
+                                    <Link to={"/"}>About Us</Link>
+                                    <Link to={"/"}>Privacy Policy</Link>
+                                    <Link to={"/"}>Return Policy</Link>
+                                    <Link to={"/"}>Help Centre</Link>
+                                    <Link to={"/"}>Store Locations</Link>
+                                    <Link to={"/"}>Careers</Link>
                                 </ul>
                             </div>
                             <div className="mr-[80px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Categories</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <li> Computers & Tablets</li>
-                                    <li> Mobile Phones & Accessories</li>
-                                    <li> TV & Home Theater</li>
-                                    <li> Audio & Headphones</li>
-                                    <li> Cameras & Camcorders</li>
-                                    <li> Gaming Equipment</li>
-                                    <li> Home Appliances</li>
+                                    <Link to={"/"}> Computers & Tablets</Link>
+                                    <Link to={"/"}> Mobile Phones & Accessories</Link>
+                                    <Link to={"/"}> TV & Home Theater</Link>
+                                    <Link to={"/"}> Audio & Headphones</Link>
+                                    <Link to={"/"}> Cameras & Camcorders</Link>
+                                    <Link to={"/"}> Gaming Equipment</Link>
+                                    <Link to={"/"}> Home Appliances</Link>
                                 </ul>
                             </div>
                             <div className="">
                                 <h4 className='font-["Poppins"] font-semibold text-xl'>Payments</h4>
                                 <div className="flex gap-x-8 mt-8">
-                                    <VisaIcon/>
-                                    <MasterCardIcon/>
-                                    <ApplePayIcon/>
-                                    <PayPleIcon/>
+                                    <Link to={"/"}><VisaIcon/></Link>
+                                    <Link to={"/"}><MasterCardIcon/></Link>
+                                    <Link to={"/"}><ApplePayIcon/></Link>
+                                    <Link to={"/"}><PayPleIcon/></Link>
                                 </div>
                                 <h4 className='font-["Poppins"] font-semibold text-xl mt-[73px]'>Follow Us</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <li>Twitter</li>
-                                    <li>Instagram</li>
-                                    <li>Facebook</li>
+                                    <Link to={"/"}>Twitter</Link>
+                                    <Link to={"/"}>Instagram</Link>
+                                    <Link to={"/"}>Facebook</Link>
                                 </ul>
                             </div>
                         </div>
