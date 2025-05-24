@@ -9,6 +9,9 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 
 const currencies = [
     {
+    "category": "All Categories",
+    },
+    {
     "category": "New Product",
     },
     {
@@ -68,7 +71,7 @@ const NewProduct = () => {
                     <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>new Products</h2>
                   </div>
                   <div className='flex items-center gap-x-2 text-[#FF624C]'>
-                    <span className='font-["Montserrat"] font-bold text-base'>All Categories</span>
+                    <span className='font-["Montserrat"] text-[#303030] text-base'>Sort by</span>
                     <div>
                         <select
                         value={newProductFilter}
@@ -77,6 +80,7 @@ const NewProduct = () => {
                             const currency = currencies.find((c)=>c.category === e.target.value)
                             setNewProductFilter(currency.category)
                         }}
+                        className='font-["Montserrat"] font-bold text-base'
                         >
                             {
                                 currencies.map((currency,index) => (
