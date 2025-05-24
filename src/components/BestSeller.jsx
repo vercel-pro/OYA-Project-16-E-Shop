@@ -27,7 +27,7 @@ const BestSeller = () => {
                         <div className="max-w-[902px] p-6">
                             <div className="flex justify-between items-center mb-12">
                                 <div>
-                                    <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>new Products</h2>
+                                    <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>Best Seller</h2>
                                 </div>
                                 <div className='flex items-center gap-x-2 text-[#FF624C]'>
                                     <span className='font-["Montserrat"] font-bold text-base'>View All</span>
