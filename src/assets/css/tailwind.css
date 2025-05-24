@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
-/* @theme {
-  --primaryColor: #FF624C;
-  --secondaryColor: #D9D9D9;
-} */
+.slick-prev:before {
+    display: none;
+}
+.slick-next:before {
+    display: none;
+}
+
+
+
+
+
 :root{
     --heading-1 : 56px;
     --heading-2 : 36px;
