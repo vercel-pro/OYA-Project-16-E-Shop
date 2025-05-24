@@ -24,7 +24,7 @@ const BestSeller = () => {
             <div className="mt-20">
                 <Container>
                     <div className="flex justify-between ">
-                        <div className="max-w-[902px] p-6 border">
+                        <div className="max-w-[902px] p-6">
                             <div className="flex justify-between items-center mb-12">
                                 <div>
                                     <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>new Products</h2>
@@ -43,7 +43,9 @@ const BestSeller = () => {
                                 <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={1} totalRating={100} price={50} bg={"transparent"} border={true}/>
                             </div>
                         </div>
-                        <div className="max-w-[544px] border">s</div>
+                        <div className="max-w-[544px]">
+                            <img src="images/promoBanner.svg" alt="promoBannerImage" />
+                        </div>
                     </div>
                 </Container>
             </div>
