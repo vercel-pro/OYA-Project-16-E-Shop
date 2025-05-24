@@ -21,7 +21,7 @@ const MiddleBar = () => {
                             type="text"
                             className='w-[332px] border border-[#cccccc] py-[18px] px-6 rounded-[10px]'
                             placeholder='Search Products ...'/>
-                            <IoSearchSharp className='w-4 text-3xl absolute top-1/2 right-6 -translate-y-1/2'/>
+                            <IoSearchSharp className='text-3xl absolute top-1/2 right-6 -translate-y-1/2'/>
                         </div>
                         <div className='w-[150px] relative pl-[50px] mr-16'>
                             <CartIcon width={35} height={35} color="#303030"/>
