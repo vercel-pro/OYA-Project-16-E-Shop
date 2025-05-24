@@ -3,11 +3,11 @@ import Container from '../commonLayouts/Container'
 import { Link } from 'react-router-dom';
 import { IoLocationOutline } from 'react-icons/io5';
 import { IoIosMail } from 'react-icons/io';
-import { FiPhone } from 'react-icons/fi';
 import VisaIcon from '../../assets/icons/VisaIcon';
 import MasterCardIcon from '../../assets/icons/MasterCardIcon';
 import ApplePayIcon from '../../assets/icons/ApplePayIcon';
 import PayPleIcon from '../../assets/icons/PayPleIcon';
+import { FaPhone } from 'react-icons/fa';
 
 const FooterBottom = () => {
     return (
@@ -19,10 +19,10 @@ const FooterBottom = () => {
                             <Link to={"/"}>
                                 <img src="images/logo.svg" alt="logo" />
                             </Link>
-                                <ul className='mt-[158px] flex flex-col gap-y-3'>
+                                <ul className='mt-[158px] flex flex-col gap-y-3 text-[#303030bf]'>
                                     <li>
                                         <Link to="tel:11234567" className='relative pl-4'>
-                                            <FiPhone className='absolute left-0 top-1/2 -translate-1/2'/>
+                                            <FaPhone className='absolute left-0 top-1/2 -translate-1/2 rotate-y-180'/>
                                             +15551234567
                                         </Link>
                                     </li>
@@ -45,50 +45,49 @@ const FooterBottom = () => {
                             <div className="mr-[96px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Links</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <Link to={"/"}></Link>
-                                    <Link to={"/"}>Products List</Link>
-                                    <Link to={"/"}>Order Tracking</Link>
-                                    <Link to={"/"}>Products Guide</Link>
-                                    <Link to={"/"}>Shopping Cart</Link>
-                                    <Link to={"/"}>Tech Blog</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Products List</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Order Tracking</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Products Guide</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Shopping Cart</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Tech Blog</Link>
                                 </ul>
                             </div>
                             <div className="mr-[96px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Supports</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <Link to={"/"}>About Us</Link>
-                                    <Link to={"/"}>Privacy Policy</Link>
-                                    <Link to={"/"}>Return Policy</Link>
-                                    <Link to={"/"}>Help Centre</Link>
-                                    <Link to={"/"}>Store Locations</Link>
-                                    <Link to={"/"}>Careers</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>About Us</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Privacy Policy</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Return Policy</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Help Centre</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Store Locations</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Careers</Link>
                                 </ul>
                             </div>
                             <div className="mr-[80px]">
                                 <h4 className='font-["Poppins"] font-semibold  text-xl'>Categories</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <Link to={"/"}> Computers & Tablets</Link>
-                                    <Link to={"/"}> Mobile Phones & Accessories</Link>
-                                    <Link to={"/"}> TV & Home Theater</Link>
-                                    <Link to={"/"}> Audio & Headphones</Link>
-                                    <Link to={"/"}> Cameras & Camcorders</Link>
-                                    <Link to={"/"}> Gaming Equipment</Link>
-                                    <Link to={"/"}> Home Appliances</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Computers & Tablets</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Mobile Phones & Accessories</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> TV & Home Theater</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Audio & Headphones</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Cameras & Camcorders</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Gaming Equipment</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'> Home Appliances</Link>
                                 </ul>
                             </div>
                             <div className="">
                                 <h4 className='font-["Poppins"] font-semibold text-xl'>Payments</h4>
                                 <div className="flex gap-x-8 mt-8">
-                                    <Link to={"/"}><VisaIcon/></Link>
-                                    <Link to={"/"}><MasterCardIcon/></Link>
-                                    <Link to={"/"}><ApplePayIcon/></Link>
-                                    <Link to={"/"}><PayPleIcon/></Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:scale-x-110'><VisaIcon/></Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:scale-x-110'><MasterCardIcon/></Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:scale-x-110'><ApplePayIcon/></Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:scale-x-110'><PayPleIcon/></Link>
                                 </div>
                                 <h4 className='font-["Poppins"] font-semibold text-xl mt-[73px]'>Follow Us</h4>
                                 <ul className='mt-6 flex flex-col gap-y-3'>
-                                    <Link to={"/"}>Twitter</Link>
-                                    <Link to={"/"}>Instagram</Link>
-                                    <Link to={"/"}>Facebook</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Twitter</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Instagram</Link>
+                                    <Link to={"/"} className='transition-all duration-300 hover:text-[#FF624C]'>Facebook</Link>
                                 </ul>
                             </div>
                         </div>
