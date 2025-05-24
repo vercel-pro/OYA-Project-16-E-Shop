@@ -19,7 +19,7 @@ const FooterBottom = () => {
                             <Link to={"/"}>
                                 <img src="images/logo.svg" alt="logo" />
                             </Link>
-                                <ul className='mt-[158px] flex flex-col gap-y-3 text-[#303030bf]'>
+                                <ul className='mt-[158px] flex flex-col gap-y-3'>
                                     <li>
                                         <Link to="tel:11234567" className='relative pl-4'>
                                             <FaPhone className='absolute left-0 top-1/2 -translate-1/2 rotate-y-180'/>
