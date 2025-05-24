@@ -4,6 +4,7 @@ import FacilityComponent from '../components/FacilityComponent';
 import FeaturedProduct from '../components/FeaturedProduct';
 import OfferSection from '../components/OfferSection';
 import NewProduct from '../components/NewProduct';
+import BestSeller from '../components/BestSeller';
 
 
 const currencies = [
@@ -60,6 +61,7 @@ const HomePage = () => {
             <FeaturedProduct/>
             <OfferSection/>
             <NewProduct/>
+            <BestSeller/>
         </>
     );
 };

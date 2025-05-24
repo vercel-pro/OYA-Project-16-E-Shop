@@ -3,7 +3,7 @@ import { FaRegHeart, FaStar } from 'react-icons/fa';
 import { IoCartOutline, IoShareSocialOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-const ProductLayout = ({ percentTag=false, categories,title,rating,totalRating,price,bg, border,stock,stockAmount }) => {
+const ProductLayout = ({ percentTag=false, categories="Category Not available",title="Title Not available",rating,totalRating,price,bg, border,stock=false,stockAmount=0 }) => {
 
     let [ratingValue, setRatingValue] = useState(new Array(rating).fill(rating))
     
@@ -41,10 +41,14 @@ const ProductLayout = ({ percentTag=false, categories,title,rating,totalRating,p
                     <span className='font-["Montserrat"] font-normal text-base text-[#303030]'> ( {totalRating} )</span>
                 </div>
                 <p className='font-["Poppins"] font-semibold text-2xl'>${price}</p>
-                <div className="w-full h-[30px] bg-[#dddddd] rounded-3xl mt-8 relative">
-                    <span className='absolute top-1/2 left-1/2 -translate-1/2 text-white font-["Montserrat"] text-sm font-bold uppercase'>50 AVAILABLE</span>
-                    <div className="w-6/10 h-[30px] bg-[#333333] rounded-3xl mt-8"></div>
-                </div>
+                {
+                    stock && 
+                    <div className="w-full h-[30px] bg-[#dddddd] rounded-3xl mt-8 relative">
+                        <span className='absolute top-1/2 left-1/2 -translate-1/2 text-white font-["Montserrat"] text-sm font-bold uppercase'>{stockAmount} AVAILABLE</span>
+                        <div className="w-6/10 h-[30px] bg-[#333333] rounded-3xl mt-8"></div>
+                    </div>
+
+                }
             </div>
         </div>
     );
