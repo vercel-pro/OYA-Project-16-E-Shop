@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductLayout from './commonLayouts/ProductLayout';
 import Container from './commonLayouts/Container';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
-import { HiMiniArrowLongRight } from 'react-icons/hi2';
+
+
+const currencies = [
+    {
+    "category": "New Product",
+    },
+    {
+    "category": "Up Coming",
+    },
+]
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -35,7 +44,9 @@ function SampleNextArrow(props) {
   );
 }
 
-const FeaturedProduct = () => {
+const NewProduct = () => {
+
+    const [newProductFilter, setNewProductFilter] = useState("")
 
   var settings = {
     dots: false,
@@ -45,8 +56,6 @@ const FeaturedProduct = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
   };
 
 
@@ -56,11 +65,26 @@ const FeaturedProduct = () => {
               <Container>
                 <div className="flex justify-between items-center mb-12">
                   <div>
-                    <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>Featured Products</h2>
+                    <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>new Products</h2>
                   </div>
                   <div className='flex items-center gap-x-2 text-[#FF624C]'>
-                    <span className='font-["Montserrat"] font-bold text-base'>View All</span>
-                    <HiMiniArrowLongRight />
+                    <span className='font-["Montserrat"] font-bold text-base'>All Categories</span>
+                    <div>
+                        <select
+                        value={newProductFilter}
+                        name="currency"
+                        onChange={(e)=>{
+                            const currency = currencies.find((c)=>c.category === e.target.value)
+                            setNewProductFilter(currency.category)
+                        }}
+                        >
+                            {
+                                currencies.map((currency,index) => (
+                                    <option key={index} value={currency.category}>{currency.category}</option>
+                                ))
+                            }
+                        </select>
+                    </div>
                   </div>
                 </div>
                 <Slider {...settings} className='flex justify-center gap-1 my-7'>
@@ -77,4 +101,4 @@ const FeaturedProduct = () => {
     );
 };
 
-export default FeaturedProduct;
+export default NewProduct;
