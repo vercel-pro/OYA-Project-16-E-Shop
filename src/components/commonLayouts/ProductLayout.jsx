@@ -3,12 +3,12 @@ import { FaRegHeart, FaStar } from 'react-icons/fa';
 import { IoCartOutline, IoShareSocialOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-const ProductLayout = ({ percentTag=false, categories="Category Not available",title="Title Not available",rating,totalRating,price,bg, border,stock=false,stockAmount=0 }) => {
+const ProductLayout = ({ width="w-[284px]", percentTag=false, categories="Category Not available",title="Title Not available",rating,totalRating,price,bg, border,stock=false,stockAmount=0 }) => {
 
     let [ratingValue, setRatingValue] = useState(new Array(rating).fill(rating))
     
     return (
-        <div style={{background:bg}} className='w-[284px] border-2 border-transparent p-6 overflow-hidden rounded-lg transition-all duration-300 group hover:border-[#C3C3C3]'>
+        <div style={{background:bg}} className={`${width} border-2 border-transparent p-6 overflow-hidden rounded-lg transition-all duration-300 group hover:border-[#C3C3C3]`}>
             <div className='relative'>
                 
                 <img src="images/productImage-1.png" alt="productImages" className='w-full' />

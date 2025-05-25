@@ -7,6 +7,7 @@ import NewProduct from '../components/NewProduct';
 import BestSeller from '../components/BestSeller';
 import Faq from '../components/faq/Faq';
 import TechTalk from '../components/TechTalk';
+import SpringSale from '../components/SpringSale';
 
 
 const currencies = [
@@ -63,6 +64,7 @@ const HomePage = () => {
             <FeaturedProduct/>
             <OfferSection/>
             <NewProduct/>
+            <SpringSale/>
             <BestSeller/>
             <Faq/>
             <TechTalk/>

@@ -24,7 +24,6 @@ const accordionData = [
 
 const Faq = () => {
     const [openIndex, setOpenIndex] = useState(accordionData.length-1)
-    console.log(accordionData.length)
 
        return (
         <>
