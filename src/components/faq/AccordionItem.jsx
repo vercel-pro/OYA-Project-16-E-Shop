@@ -15,7 +15,7 @@ const AccordionItem = ({title, content, onToggle, isOpen}) => {
                         <IoIosArrowForward className='bg-[#FF624C] text-white p-2 text-4xl rounded-full'/>
                     }
                     {title}
-                    </button>
+                </button>
                 {
                     isOpen &&
                     <div className="p-4 bg-white rounded-3xl ">
