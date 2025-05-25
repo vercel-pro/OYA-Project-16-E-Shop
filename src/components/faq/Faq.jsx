@@ -22,26 +22,31 @@ const accordionData = [
 ]
 
 const Faq = () => {
-    const [openAccordion, setOpenAccordion] = useState(null)
+    const [openIndex, setOpenIndex] = useState(null)
 
-
-
-    return (
+       return (
         <>
-            <div className="mt-16">
+            <div className="mt-16 py-16 bg-[#F4F4F4]">
                 <Container>
                     <div className="flex justify-between">
-                        <div className="max-w-[902px] border">
+                        <div className="w-[902px]">
                             {
                                 accordionData.map((item,index)=>(
-                                    <div key={index}>
-                                        <AccordionItem/>
-                                    </div>
+                                        <AccordionItem
+                                            key={index}
+                                            title={item.title}
+                                            content={item.content}
+                                            onToggle={()=> {setOpenIndex(openIndex === index ? null : index)
+                                                // console.log(openIndex, index)
+                                            }}
+                                            // onToggle={()=> console.log(openIndex, index)}
+                                            isOpen={openIndex === index}
+                                        />
                                 ))
                             }
                         </div>
-                        <div className="max-w-[544px] border">
-                            <img src="../../public/images/" alt="" />
+                        <div className="w-[544px] relative border">
+                            <img src="../../../public/images/faqDots.svg" alt="Dots" className='absolute top-0 right-0'/>
                         </div>
                     </div>
                 </Container>
