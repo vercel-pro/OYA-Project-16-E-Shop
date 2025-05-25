@@ -48,7 +48,7 @@ const Faq = () => {
                             }
                         </div>
                         <div className="w-[544px] ">
-                            <img src="public/images/faqDots.svg" alt="Dots" className='absolute top-0 right-0'/>
+                            <img src="images/faqDots.svg" alt="Dots" className='absolute top-0 right-0'/>
                             <h3 className={`max-w-[325px] font-["Poppins"] font-semibold text-[38px] leading-[46px] text-[#303030bf] mt-44`}>Frequently Asked Questions</h3>
                             <p className={`font-["Montserrat"] font-normal leading-[30px] text-xl text-[#303030ab] mt-6 mb-16`}>
                                 Questions that get asked the most by our clients. Get any burning questions?
