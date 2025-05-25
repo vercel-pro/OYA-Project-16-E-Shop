@@ -6,7 +6,7 @@ const AccordionItem = ({title, content, onToggle, isOpen}) => {
     return (
         <>
         {/* As per me */}
-            <div onClick={onToggle} className="bg-white mb-6 rounded-3xl">
+            <div onClick={onToggle} className="bg-white mb-6 last:mb-0 rounded-3xl">
                 <button className={`w-full px-12 pt-8 ${isOpen ? 'pb-0' : 'pb-8'} font-["Poppins"] font-semibold leading-7 text-2xl text-left text-[#303030] cursor-pointer flex items-center gap-x-8 `}>
                     {
                         isOpen ?
@@ -19,7 +19,7 @@ const AccordionItem = ({title, content, onToggle, isOpen}) => {
                 {
                     isOpen &&
                     <div className="p-4 bg-white rounded-3xl ">
-                        <p className='text-justify pl-[100px] pr-14'>{content}</p>                    
+                        <p className='text-justify pl-[100px] pr-14 font-["Montserrat"] text-[#303030bf]'>{content}</p>                    
                     </div>
                 }
             </div>
