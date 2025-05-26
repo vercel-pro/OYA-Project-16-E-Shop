@@ -5,7 +5,7 @@ import { HiClock } from 'react-icons/hi2';
 const TechTalkCard = () => {
     return (
         <>
-            <div className="w-[450px] p-1 rounded-4xl transition-all duration-100 border border-transparent hover:p-[52px] hover:border-[#30303040]">
+            <div className="w-[506px] p-6 rounded-4xl transition-all duration-100 border border-transparent hover:p-[52px] hover:border-[#30303040]">
                 <div className="w-full h-[406px] rounded-4xl overflow-hidden">
                     <img src="images/productImage-1.png" alt="productImages" className='w-full' />
                 </div>

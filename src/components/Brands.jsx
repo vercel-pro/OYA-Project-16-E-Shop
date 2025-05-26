@@ -9,7 +9,7 @@ import BrandIconFive from '../assets/icons/BrandIconFive';
 const Brands = () => {
     return (
         <>
-            <div className="my-24">
+            <div className="mt-12 mb-24">
                 <Container>
                     <div className="flex justify-between items-center">
                         <BrandIconOne/>

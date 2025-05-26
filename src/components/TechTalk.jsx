@@ -18,7 +18,7 @@ const TechTalk = () => {
                             <HiMiniArrowLongRight />
                         </div>
                     </div>
-                    <div className={`flex flex-wrap gap-2`}>
+                    <div className={`flex flex-wrap`}>
                         <TechTalkCard/>
                         <TechTalkCard/>
                         <TechTalkCard/>
