@@ -8,6 +8,7 @@ import BestSeller from '../components/BestSeller';
 import Faq from '../components/faq/Faq';
 import TechTalk from '../components/TechTalk';
 import SpringSale from '../components/SpringSale';
+import Brands from '../components/Brands';
 
 
 const currencies = [
@@ -68,6 +69,7 @@ const HomePage = () => {
             <BestSeller/>
             <Faq/>
             <TechTalk/>
+            <Brands/>
         </>
     );
 };
