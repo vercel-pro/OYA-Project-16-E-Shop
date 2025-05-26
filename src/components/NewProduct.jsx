@@ -59,7 +59,6 @@ const NewProduct = () => {
                     <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={3} totalRating={300} price={562} bg={"transparent"} border={true}/>
                     <ProductLayout percentTag={false} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={4} totalRating={400} price={352} bg={"transparent"} border={true}/>
                     <ProductLayout percentTag={false} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={1} totalRating={100} price={32} bg={"transparent"} border={true}/>
-                    <ProductLayout percentTag={true} categories={"Laptop"} title={"JPhone 13 High Quality Value Buy Best Cam..."} rating={1} totalRating={100} price={50} bg={"transparent"} border={true}/>
                 </div>
                 <div className="flex justify-center items-center mt-20">
                     <Button text={"Load More"} bg='none' textColor={"text-[#FF624C]"} border='border-2' borderColor={'border-[#FF624C]'}/>
