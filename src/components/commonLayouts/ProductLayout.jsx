@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ProductLayout = ({
   width = "w-[284px]",
   padding = "p-6",
-  hoverBorderColor = "border-[#C3C3C3]",
+  hoverBorderColor = "hover:border-[#C3C3C3]",
   imageSrc = "images/productImage-1.png",
   imgWith,
   percentTag = false,
@@ -20,12 +20,15 @@ const ProductLayout = ({
   border,
   stock = false,
   stockAmount = 0,
+  stockText = "AVAILABLE",
+  stockProgressColor = "bg-[#333333]",
+  progressWidth = "w-6/10",
 }) => {
   let [ratingValue, setRatingValue] = useState(new Array(rating).fill(rating));
 
   return (
     <div
-      className={`${width} ${bg} border-2 border-transparent ${padding} overflow-hidden rounded-lg transition-all duration-300 group hover:bg-[#fff] hover:${hoverBorderColor}`}
+      className={`${width} ${bg} border-2 border-transparent ${padding} overflow-hidden rounded-lg transition-all duration-300 group hover:bg-[#fff] ${hoverBorderColor}`}
     >
       <div className="relative">
         <div className={`${imgWith} mx-auto`}>
@@ -39,7 +42,7 @@ const ProductLayout = ({
         {percentTag && (
           <>
             {rounded ? (
-              <span className='bg-[#FF624c] w-[100px] h-[100px] text-base font-["Montserrat"] font-bold text-white rounded-full text-center absolute -top-2 -right-2 flex justify-center items-center'>
+              <span className='bg-[#FF624c] w-[100px] h-[100px] text-base font-["Montserrat"] font-bold text-white rounded-full text-center absolute top-0 -right-1 flex justify-center items-center'>
                 50%
               </span>
             ) : (
@@ -90,9 +93,11 @@ const ProductLayout = ({
         {stock && (
           <div className="w-full h-[30px] bg-[#dddddd] rounded-3xl mt-8 relative">
             <span className='absolute top-1/2 left-1/2 -translate-1/2 text-white font-["Montserrat"] text-sm font-bold uppercase'>
-              {stockAmount} AVAILABLE
+              {stockAmount} {stockText}
             </span>
-            <div className="w-6/10 h-[30px] bg-[#333333] rounded-3xl mt-8"></div>
+            <div
+              className={`${progressWidth} h-[30px] ${stockProgressColor} rounded-3xl mt-8`}
+            ></div>
           </div>
         )}
       </div>

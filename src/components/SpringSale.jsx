@@ -19,6 +19,9 @@ const springSaleData = [
     border: true,
     stock: true,
     stockAmount: 20,
+    stockText: "AVAILABLE",
+    stockProgressColor: "bg-[#333333]",
+    progressWidth: "w-6/10",
   },
   {
     image: "images/spring_Placeholder.svg",
@@ -32,7 +35,10 @@ const springSaleData = [
     bg: "white",
     border: false,
     stock: true,
-    stockAmount: 50,
+    stockAmount: "",
+    stockText: "LIMITED STOCK!",
+    stockProgressColor: "bg-[#FF624C]",
+    progressWidth: "w-19/20",
   },
   {
     image: "images/spring_Placeholder.svg",
@@ -47,6 +53,9 @@ const springSaleData = [
     border: true,
     stock: true,
     stockAmount: 20,
+    stockText: "AVAILABLE",
+    stockProgressColor: "bg-[#333333]",
+    progressWidth: "w-6/10",
   },
   {
     image: "images/spring_Placeholder.svg",
@@ -61,6 +70,9 @@ const springSaleData = [
     border: true,
     stock: true,
     stockAmount: 100,
+    stockText: "AVAILABLE",
+    stockProgressColor: "bg-[#333333]",
+    progressWidth: "w-6/10",
   },
   {
     image: "images/spring_Placeholder.svg",
@@ -75,6 +87,9 @@ const springSaleData = [
     border: true,
     stock: true,
     stockAmount: 20,
+    stockText: "AVAILABLE",
+    stockProgressColor: "bg-[#333333]",
+    progressWidth: "w-6/10",
   },
 ];
 
@@ -238,7 +253,7 @@ const SpringSale = () => {
                   <ProductLayout
                     key={index}
                     width="w-[463px]"
-                    hoverBorderColor="border-transparent"
+                    hoverBorderColor={"hover:border-transparent"}
                     padding="p-10"
                     bg="bg-[#eaeaea]"
                     imageSrc={item.image}
@@ -253,6 +268,9 @@ const SpringSale = () => {
                     border={item.border}
                     stock={item.stock}
                     stockAmount={item.stockAmount}
+                    stockText={item.stockText}
+                    stockProgressColor={item.stockProgressColor}
+                    progressWidth={item.progressWidth}
                   />
                 ))}
               </Slider>
