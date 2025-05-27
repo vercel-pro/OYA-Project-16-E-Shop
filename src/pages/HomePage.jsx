@@ -66,7 +66,7 @@ const HomePage = () => {
       <SpringSale />
       <BestSeller />
       <Faq />
-      {/* <TechTalk/> */}
+      <TechTalk />
       <Brands />
     </>
   );
