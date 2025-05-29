@@ -18,7 +18,7 @@ const ProductLayout = ({
   totalRating = 100,
   price = 999,
   discount = false,
-  percentPercentage = 10,
+  discountPercentage = 10,
   discountedPrice = 118,
   stock = false,
   hoverBorderColor = "hover:border-black-25",
@@ -41,11 +41,11 @@ const ProductLayout = ({
           <>
             {rounded ? (
               <span className='bg-orange w-[100px] h-[100px] text-base font-["Montserrat"] font-bold text-white rounded-full text-center absolute top-0 -right-1 flex justify-center items-center'>
-                {percentPercentage + "%"}
+                {discountPercentage + "%"}
               </span>
             ) : (
               <span className='bg-orange py-[7px] px-5 text-base font-["Montserrat"] font-bold text-white rounded-md text-center absolute -top-2 -right-2'>
-                {percentPercentage + "%"}
+                {discountPercentage + "%"}
               </span>
             )}
           </>

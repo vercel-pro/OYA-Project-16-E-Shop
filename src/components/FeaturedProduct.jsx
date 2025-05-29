@@ -113,7 +113,7 @@ const FeaturedProduct = () => {
                 totalRating={item.totalRating}
                 price={item.price}
                 discount={item.discount}
-                percentPercentage={item.percentPercentage}
+                discountPercentage={item.discountPercentage}
                 discountedPrice={item.discountedPrice}
               />
             ))}

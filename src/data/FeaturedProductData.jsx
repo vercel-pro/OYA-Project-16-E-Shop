@@ -7,7 +7,7 @@ export const FeaturedProductData = [
     totalRating: 50,
     price: "99.00",
     discount: false,
-    percentPercentage: 25,
+    discountPercentage: 25,
     discountedPrice: 0,
   },
   {
@@ -18,7 +18,7 @@ export const FeaturedProductData = [
     totalRating: 200,
     price: "118.00",
     discount: true,
-    percentPercentage: 50,
+    discountPercentage: 50,
     discountedPrice: "59.00",
   },
   {
@@ -29,7 +29,7 @@ export const FeaturedProductData = [
     totalRating: 200,
     price: "1,199.00",
     discount: false,
-    percentPercentage: 30,
+    discountPercentage: 30,
     discountedPrice: "0",
   },
   {
@@ -40,7 +40,7 @@ export const FeaturedProductData = [
     totalRating: 50,
     price: "600.00",
     discount: true,
-    percentPercentage: 20,
+    discountPercentage: 20,
     discountedPrice: "480.00",
   },
   {
@@ -51,7 +51,7 @@ export const FeaturedProductData = [
     totalRating: 50,
     price: "999.00",
     discount: false,
-    percentPercentage: 25,
+    discountPercentage: 25,
     discountedPrice: 0,
   },
   {
@@ -62,7 +62,7 @@ export const FeaturedProductData = [
     totalRating: 50,
     price: "500.00",
     discount: true,
-    percentPercentage: 10,
+    discountPercentage: 10,
     discountedPrice: "450.00",
   },
 ];
