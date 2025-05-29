@@ -30,7 +30,6 @@ const TopRightBar = () => {
                 (c) => c.code === e.target.value
               );
               setSelectedCurrency(currency.code);
-              console.log(selectedCurrency);
             }}
           >
             {Currencies.map((currency, index) => (
