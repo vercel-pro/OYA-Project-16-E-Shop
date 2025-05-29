@@ -1,0 +1,46 @@
+export const Countries = [
+  {
+    name: "United States",
+    value: "US",
+    flag: "https://flagcdn.com/16x12/us.png",
+  },
+  { name: "Canada", value: "CA", flag: "https://flagcdn.com/16x12/ca.png" },
+  {
+    name: "United Kingdom",
+    value: "GB",
+    flag: "https://flagcdn.com/16x12/gb.png",
+  },
+  { name: "Germany", value: "DE", flag: "https://flagcdn.com/16x12/de.png" },
+  { name: "France", value: "FR", flag: "https://flagcdn.com/16x12/fr.png" },
+  { name: "Italy", value: "IT", flag: "https://flagcdn.com/16x12/it.png" },
+  { name: "Spain", value: "ES", flag: "https://flagcdn.com/16x12/es.png" },
+  { name: "Australia", value: "AU", flag: "https://flagcdn.com/16x12/au.png" },
+  { name: "Brazil", value: "BR", flag: "https://flagcdn.com/16x12/br.png" },
+  { name: "India", value: "IN", flag: "https://flagcdn.com/16x12/in.png" },
+  { name: "Japan", value: "JP", flag: "https://flagcdn.com/16x12/jp.png" },
+  { name: "China", value: "CN", flag: "https://flagcdn.com/16x12/cn.png" },
+  { name: "Russia", value: "RU", flag: "https://flagcdn.com/16x12/ru.png" },
+  { name: "Mexico", value: "MX", flag: "https://flagcdn.com/16x12/mx.png" },
+  {
+    name: "South Korea",
+    value: "KR",
+    flag: "https://flagcdn.com/16x12/kr.png",
+  },
+  {
+    name: "South Africa",
+    value: "ZA",
+    flag: "https://flagcdn.com/16x12/za.png",
+  },
+  {
+    name: "Saudi Arabia",
+    value: "SA",
+    flag: "https://flagcdn.com/16x12/sa.png",
+  },
+  {
+    name: "Netherlands",
+    value: "NL",
+    flag: "https://flagcdn.com/16x12/nl.png",
+  },
+  { name: "Sweden", value: "SE", flag: "https://flagcdn.com/16x12/se.png" },
+  { name: "Argentina", value: "AR", flag: "https://flagcdn.com/16x12/ar.png" },
+];
