@@ -21,18 +21,18 @@ export const Currencies = [
     exchange_rate_to_usd: 1.08,
   },
   {
-    name: "British Pound",
-    code: "GBP",
-    symbol: "£",
-    country: "United Kingdom",
-    exchange_rate_to_usd: 1.25,
-  },
-  {
     name: "Japanese Yen",
     code: "JPY",
     symbol: "¥",
     country: "Japan",
     exchange_rate_to_usd: 0.0064,
+  },
+  {
+    name: "British Pound Sterling",
+    code: "GBP",
+    symbol: "£",
+    country: "United Kingdom",
+    exchange_rate_to_usd: 1.27,
   },
   {
     name: "Indian Rupee",

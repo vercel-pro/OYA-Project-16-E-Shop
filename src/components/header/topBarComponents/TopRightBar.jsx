@@ -67,7 +67,7 @@ const TopRightBar = () => {
                   alt={selectedCountry?.name}
                   className="w-5 h-4 mr-2"
                 />
-                <span className="mr-6">{selectedCountry?.name}</span>
+                <span className="mr-6">{selectedCountry?.language}</span>
                 <FaAngleDown />
               </>
             ) : (
@@ -92,7 +92,7 @@ const TopRightBar = () => {
                     alt={country?.name}
                     className="w-5 h-4 mr-2"
                   />
-                  {country.name}
+                  {country.language}
                 </li>
               ))}
             </ul>
