@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../commonLayouts/Container";
 import CartIcon from "../../assets/icons/CartIcon";
 import UserIcon from "../../assets/icons/UserIcon";
