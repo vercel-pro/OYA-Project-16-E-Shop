@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-import { HiMiniArrowLongRight } from "react-icons/hi2";
+import ArrowIcon from "../assets/icons/ArrowIcon";
+import { FeaturedProductData } from "./../data/FeaturedProductData";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -78,7 +79,7 @@ const FeaturedProduct = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -90,89 +91,32 @@ const FeaturedProduct = () => {
         <Container>
           <div className="flex justify-between items-center mb-12">
             <div>
-              <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-[#303030] capitalize'>
+              <h2 className='font-["Poppins"] font-semibold text-4xl leading-12 text-black capitalize'>
                 Featured Products
               </h2>
             </div>
-            <div className="flex items-center gap-x-2 text-[#FF624C]">
-              <span className='font-["Montserrat"] font-bold text-base'>
+            <div className="flex items-center gap-x-7 text-[#FF624C]">
+              <span className='font-["Montserrat"] font-bold text-base leading-6'>
                 View All
               </span>
-              <HiMiniArrowLongRight />
+              <ArrowIcon />
             </div>
           </div>
           <Slider {...settings} className="flex justify-center gap-1 my-7">
-            <ProductLayout
-              percentTag={true}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={2}
-              totalRating={200}
-              price={900}
-              bg={"transparent"}
-              border={true}
-              hoverBorderColor={"hover:border-[#ff0133]"}
-            />
-            <ProductLayout
-              percentTag={false}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={5}
-              totalRating={500}
-              price={400}
-              bg={"transparent"}
-              border={true}
-            />
-            <ProductLayout
-              percentTag={true}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={3}
-              totalRating={300}
-              price={562}
-              bg={"transparent"}
-              border={true}
-            />
-            <ProductLayout
-              percentTag={false}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={4}
-              totalRating={400}
-              price={352}
-              bg={"transparent"}
-              border={true}
-            />
-            <ProductLayout
-              percentTag={false}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={1}
-              totalRating={100}
-              price={32}
-              bg={"transparent"}
-              border={true}
-            />
-            <ProductLayout
-              percentTag={true}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={1}
-              totalRating={100}
-              price={50}
-              bg={"transparent"}
-              border={true}
-            />
-            <ProductLayout
-              percentTag={true}
-              categories={"Laptop"}
-              title={"JPhone 13 High Quality Value Buy Best Cam..."}
-              rating={1}
-              totalRating={100}
-              price={50}
-              bg={"transparent"}
-              border={true}
-            />
+            {FeaturedProductData.map((item, index) => (
+              <ProductLayout
+                key={index}
+                imageSrc={item.imageSrc}
+                categories={item.categories}
+                title={item.title}
+                rating={item.rating}
+                totalRating={item.totalRating}
+                price={item.price}
+                discount={item.discount}
+                percentPercentage={item.percentPercentage}
+                discountedPrice={item.discountedPrice}
+              />
+            ))}
           </Slider>
         </Container>
       </div>

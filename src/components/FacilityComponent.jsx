@@ -8,7 +8,7 @@ const FacilityComponent = () => {
   return (
     <>
       <Container>
-        <div className="flex justify-between items-center mb-20">
+        <div className="flex justify-between items-center text-black mb-20">
           <div className="flex items-center gap-x-6">
             <HeadPhoneIcon />
             <div>

@@ -2,6 +2,7 @@
 
 @theme {
   --color-black: #303030;
+  --color-black-15: #30303026;
   --color-black-25: #30303040;
   --color-black-50: #30303080;
   --color-black-75: #303030bf;
@@ -10,7 +11,6 @@
   --color-orange: #ff624c;
   --color-yellow: #fed550;
   --color-orange10: #ffefed;
-  --color-redColor: #ff0000;
 }
 
 .slick-prev:before {
@@ -28,3 +28,6 @@
     heading-8: 14px;
     para: 20px; 
 */
+.t {
+  background: #30303026;
+}
