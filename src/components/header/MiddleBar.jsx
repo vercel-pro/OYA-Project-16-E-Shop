@@ -40,7 +40,7 @@ const MiddleBar = () => {
                 </span>
               </div>
             </div>
-            <div className='w-[170px] text-black  relative pl-[50px] after:content-[""] after:w-[1px] after:h-8 after:bg-[#303030] after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2'>
+            <div className='w-[170px] text-black  relative pl-[50px] after:content-[""] after:w-[1px] after:h-8 after:bg-black after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2'>
               <UserIcon width={28} height={28} color="#303030" />
               <div className="absolute top-1/2 -translate-y-1/2 left-24">
                 <p className='font-["Montserrat"] font-normal text-base capitalize leading-6'>

@@ -42,7 +42,7 @@ const TopRightBar = () => {
         <div className='relative before:content-[""] before:absolute before:w-[1px] before:h-8 before:bg-[#BFBFBF] before:-left-6 before:top-1/2 before:-translate-1/2 after:content-[""] after:absolute after:w-[1px] after:h-8 after:bg-[#BFBFBF] after:-right-6 after:top-1/2 after:-translate-1/2'>
           <select
             name="country"
-            className="w-[170px] text-right hidden"
+            className="text-right hidden"
             value={selectedCountry?.value || ""}
             onChange={(e) => {
               const country = Countries.find((c) => c.value === e.target.value);
@@ -58,7 +58,7 @@ const TopRightBar = () => {
           {/* Custom Dropdown Country*/}
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="w-[170px]  p-2 cursor-pointer flex items-center"
+            className="w-[112px] cursor-pointer flex justify-start items-center"
           >
             {selectedCountry ? (
               <>
@@ -67,12 +67,19 @@ const TopRightBar = () => {
                   alt={selectedCountry?.name}
                   className="w-5 h-4 mr-2"
                 />
-                <span className="mr-6">{selectedCountry?.language}</span>
+                <span className="mr-5">{selectedCountry?.language}</span>
                 <FaAngleDown />
               </>
             ) : (
-              <span className="flex items-center gap-x-2">
-                Select a country{" "}
+              <span className="flex items-center gap-x-[10.5px]">
+                <>
+                  <img
+                    src={Countries[0].flag}
+                    alt={Countries[0].name}
+                    className="w-5 h-4"
+                  />
+                  <span>{Countries[0].language}</span>
+                </>
                 <FaAngleDown className={`${isOpen && "rotate-180"}`} />
               </span>
             )}

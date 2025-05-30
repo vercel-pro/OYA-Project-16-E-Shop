@@ -17,10 +17,4 @@ export const Countries = [
     language: "French",
     flag: "https://flagcdn.com/16x12/fr.png",
   },
-  {
-    name: "Japan",
-    value: "JP",
-    language: "Japanese",
-    flag: "https://flagcdn.com/16x12/jp.png",
-  },
 ];

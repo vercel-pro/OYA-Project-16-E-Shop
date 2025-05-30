@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "../commonLayouts/Container";
 import { Link } from "react-router-dom";
-// import { IoHandLeft } from "react-icons/io5";
+import { IoHandLeft } from "react-icons/io5";
 import { RiArrowDownSLine } from "react-icons/ri";
 import MenuBarIcon from "../../assets/icons/MenuBarIcon";
 
@@ -146,8 +146,8 @@ const NavBar = () => {
             <div>
               <ul className="flex items-center gap-x-20">
                 <li className="flex items-center gap-x-1 cursor-pointer">
-                  <Link to={"/product-list"}>LIMITED SALE 👋🏻</Link>
-                  {/* <IoHandLeft /> */}
+                  <Link to={"/product-list"}>LIMITED SALE</Link>
+                  <IoHandLeft />
                 </li>
                 <li>
                   <Link to={"/product-list"}>Best Seller</Link>

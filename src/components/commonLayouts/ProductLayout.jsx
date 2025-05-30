@@ -22,6 +22,7 @@ const ProductLayout = ({
   discountedPrice = 118,
   stock = false,
   hoverBorderColor = "hover:border-black-25",
+  amountTextHover = false,
   stockAmount = 0,
   stockText = "AVAILABLE",
   stockProgressColor = "bg-black",
@@ -40,7 +41,7 @@ const ProductLayout = ({
         {discount && (
           <>
             {rounded ? (
-              <span className='bg-orange w-[100px] h-[100px] text-base font-["Montserrat"] font-bold text-white rounded-full text-center absolute top-0 -right-1 flex justify-center items-center'>
+              <span className='bg-orange w-[100px] h-[100px] font-["Montserrat"] font-semibold text-2xl text-white rounded-full text-center absolute top-0 -right-1 flex justify-center items-center'>
                 {discountPercentage + "%"}
               </span>
             ) : (
@@ -91,6 +92,8 @@ const ProductLayout = ({
           <p
             className={`font-["Poppins"] font-semibold text-2xl ${
               discount ? "text-orange" : "text-black"
+            } transition-all duration-300 ${
+              amountTextHover && "group-hover:text-orange"
             }`}
           >
             {discount ? "$" + discountedPrice : "$" + price}
