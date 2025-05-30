@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
+import { GrStar } from "react-icons/gr";
 import { IoCartOutline, IoShareSocialOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
@@ -15,6 +16,8 @@ const ProductLayout = ({
   categories = "Category Not available",
   title = "Title Not available",
   rating = true,
+  ratingColor = "text-yellow",
+  ratingHover = false,
   totalRating = 100,
   price = 999,
   discount = false,
@@ -32,7 +35,7 @@ const ProductLayout = ({
 
   return (
     <div
-      className={`${width} ${bg} ${border} ${borderColor}  ${padding} overflow-hidden rounded-lg transition-all duration-300 group hover:bg-[#fff] ${hoverBorderColor}`}
+      className={`${width} ${bg} ${border} ${borderColor}  ${padding} overflow-hidden rounded-lg transition-all duration-300 group hover:bg-white ${hoverBorderColor}`}
     >
       <div className="relative">
         <div className={`${imgWith} mx-auto`}>
@@ -79,16 +82,18 @@ const ProductLayout = ({
         <h3 className='font-["Poppins"] font-semibold text-xl leading-[30px] text-black transition-all duration-300 group-hover:text-orange group-hover:underline'>
           {title}
         </h3>
-        <div className="flex items-center gap-2 text-yellow mt-1">
+        <div
+          className={`flex items-center gap-2 ${ratingColor} transition-all duration-300 group-hover:text-yellow mt-1`}
+        >
           {ratingValue.map((item, index) => (
-            <FaStar key={index} />
+            <GrStar key={index} className="text-xl" />
           ))}
           <span className='font-["Montserrat"] font-normal text-base text-black'>
             {" "}
             ( {totalRating} )
           </span>
         </div>
-        <div className="flex items-baseline gap-x-2 mt-6">
+        <div className="flex items-baseline gap-x-2 mt-4">
           <p
             className={`font-["Poppins"] font-semibold text-2xl ${
               discount ? "text-orange" : "text-black"

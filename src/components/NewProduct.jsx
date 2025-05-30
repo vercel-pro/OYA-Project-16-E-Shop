@@ -62,6 +62,7 @@ const NewProduct = () => {
           <div className="flex justify-start gap-6 my-7">
             {NewProductData.map((item, index) => (
               <ProductLayout
+                key={index}
                 imageSrc={item.imageSrc}
                 categories={item.categories}
                 title={item.title}

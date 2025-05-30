@@ -13,19 +13,19 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        background: "white",
+        background: "#f4f4f4",
         color: "#303030",
         fontSize: "20px",
         border: "1px solid #303030",
         borderRadius: "50%",
-        width: "40px",
-        height: "40px",
+        width: "72px",
+        height: "72px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
         right: "0",
-        translate: "10px",
+        translate: "30px",
         zIndex: "99",
       }}
       onClick={onClick}
@@ -150,6 +150,8 @@ const SpringSale = () => {
                     title={item.title}
                     rating={item.rating}
                     totalRating={item.totalRating}
+                    ratingColor={"text-white"}
+                    ratingHover={true}
                     price={item.price}
                     discount={item.discount}
                     discountPercentage={item.discountPercentage}
