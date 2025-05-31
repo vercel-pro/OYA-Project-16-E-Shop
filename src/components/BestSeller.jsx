@@ -20,7 +20,7 @@ const BestSeller = () => {
                     Best Seller
                   </h2>
                 </div>
-                <div className="flex items-center gap-x-7 text-[#FF624C]">
+                <div className="flex items-center gap-x-7 text-orange">
                   <span className='font-["Montserrat"] font-bold text-base leading-6'>
                     View All
                   </span>
