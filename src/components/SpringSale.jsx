@@ -138,7 +138,7 @@ const SpringSale = () => {
                 {SpringSaleData.map((item, index) => (
                   <ProductLayout
                     key={index}
-                    width="w-[463px]"
+                    width="w-[454px]"
                     hoverBorderColor={"hover:border-transparent"}
                     padding="p-10"
                     bg="bg-[#eaeaea]"
