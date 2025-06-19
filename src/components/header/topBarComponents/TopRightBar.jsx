@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Currencies from "../../../data/currencies";
+import Currencies from "../../../data/Currencies";
 import Countries from "../../../data/Countries";
 import FacebookIcon from "../../../assets/icons/FacebookIcon";
 import InstagramIcon from "../../../assets/icons/InstagramIcon";
