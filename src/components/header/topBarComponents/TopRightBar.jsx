@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import Currencies from "../../../data/Currencies";
-// import Countries from "../../../data/Countries";
-import Currencies from "pdata/Currencies";
-import Countries from "pdata/Countries";
+import Currencies from "../../../data/currencies";
+import Countries from "../../../data/Countries";
 import FacebookIcon from "../../../assets/icons/FacebookIcon";
 import InstagramIcon from "../../../assets/icons/InstagramIcon";
 import TwitterIcon from "../../../assets/icons/TwitterIcon";
-import { Currencies } from "./../../../data/Currencies";
 
 const TopRightBar = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
