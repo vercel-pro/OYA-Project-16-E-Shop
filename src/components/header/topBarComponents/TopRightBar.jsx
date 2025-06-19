@@ -3,11 +3,12 @@ import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 // import Currencies from "../../../data/Currencies";
 // import Countries from "../../../data/Countries";
-import Currencies from "pData/Currencies";
-import Countries from "pData/Countries";
+import Currencies from "pdata/Currencies";
+import Countries from "pdata/Countries";
 import FacebookIcon from "../../../assets/icons/FacebookIcon";
 import InstagramIcon from "../../../assets/icons/InstagramIcon";
 import TwitterIcon from "../../../assets/icons/TwitterIcon";
+import { Currencies } from "./../../../data/Currencies";
 
 const TopRightBar = () => {
   const [selectedCountry, setSelectedCountry] = useState(null);
